@@ -1,81 +1,77 @@
-# 📚 School Notes Repository  
-**Structured personal knowledge base with executable solvers**  
-*(Open for anyone to use/learn from!)*  
+# School Notes
 
-## 🌟 What's Inside  
-school-notes/
-├── subject/ # e.g., math/, physics/, cs/
-│ └── topic/ # e.g., pythagorean-theorem/
-│ ├── notes.txt # My personal study notes
-│ ├── solver.c # C implementation
-│ ├── solver # Pre-built executable (Linux/macOS)
-│ └── solver.exe # Pre-built executable (Windows)
-└── ...
+A structured collection of my academic notes and executable solvers for math and science topics.  
+**Others are welcome to use these!**
+
+## Repository Structure
+
+Each topic follows this standardized format:
+subject/
+└── topic-name/
+├── notes.txt # Theory and explanations
+├── solver.c # C source code
+├── solver # Linux/macOS executable
+└── solver.exe # Windows executable
 
 Copy
 
-## 🚀 How to Use Any Solver  
-1. **Navigate** to a topic:  
-   ```bash  
-   cd math/pythagorean-theorem  
+Example:  
+`math/pythagorean-theorem/` contains notes and a solver for the Pythagorean theorem.
+
+## Getting Started
+
+### Using Pre-Built Solvers
+
+1. Navigate to any topic:
+   ```bash
+   cd math/pythagorean-theorem
 Run the solver:
 
 bash
 Copy
-./solver       # Linux/macOS  
-.\solver.exe   # Windows  
-Input format (example):
+./solver        # Linux/macOS
+.\solver.exe    # Windows
+Input Examples
+For the Pythagorean solver:
 
 plaintext
 Copy
-> a=3 b=4 c=?  
-Result: c = 5.00  
+> a=3 b=4 c=?
+Result: c = 5.00
+
+> a=5 b=? c=13
+Result: b = 12.00
 Type quit to exit.
 
-🔧 For Contributors/Modifiers
-Compiling Solvers
-Rebuild any solver after editing .c files:
+For Developers
+Compiling from Source
+Rebuild any solver:
 
 bash
 Copy
-gcc solver.c -o solver -lm  # Linux/macOS  
-gcc solver.c -o solver.exe -lm  # Windows  
+gcc solver.c -o solver -lm    # Linux/macOS
+gcc solver.c -o solver.exe -lm # Windows
 Adding New Topics
-Create a folder:
+Create a new folder:
 
 bash
 Copy
-mkdir -p physics/kinematics  
+mkdir -p physics/kinematics
 Add:
 
-notes.txt: Concepts/formulas
+notes.txt: Your study notes
 
-solver.c: Your implementation
+solver.c: Implementation
 
-💡 Why This Structure?
-For Me: Organized study reference with runnable examples.
-
-For Others:
-
-🧠 Learn from annotated notes
-
-🛠️ Reuse solvers for homework/labs
-
-🔄 Improve via PRs (I’ll credit you!)
-
-🚨 Troubleshooting
-Permission denied? Run:
+Troubleshooting
+Permission denied (Linux/macOS):
 
 bash
 Copy
-chmod +x solver  
-Can’t find files? Double-check paths with:
+chmod +x solver
+File not found:
+Verify your current directory with pwd and ls.
 
-bash
-Copy
-pwd  # Show current directory  
-ls   # List files  
-📜 License: MIT
-(Use freely, but credit this repo and share alike!)
-
-Open in Codespaces
+License
+This content is shared under CC BY-SA 4.0.
+Use, adapt, and share freely with attribution.
